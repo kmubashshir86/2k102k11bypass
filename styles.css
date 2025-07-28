@@ -6,79 +6,196 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: #1a1a1a;
+    background-color: #f8fafc;
 }
 
 header {
     text-align: center;
-    padding: 2rem;
-    background-color: #1e88e5;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #1e88e5, #42a5f5);
     color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
 }
 
 main {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 1rem;
 }
 
 .steps {
     margin-top: 2rem;
 }
 
+.steps h2 {
+    font-size: 2rem;
+    color: #1e88e5;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
 article {
     background: white;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 article h3 {
-    font-size: 1.5rem;
-    color: #1e88e5;
-    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    color: #1565c0;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
 }
 
 article p {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-download {
+    background-color: #43a047;
+    color: white;
+}
+
+.btn-download:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+.btn-contact {
+    background-color: #0088cc;
+    color: white;
+}
+
+.btn-contact:hover {
+    background-color: #006699;
+    transform: scale(1.05);
 }
 
 footer {
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    background-color: #e0e0e0;
+    padding: 2rem;
+    margin-top: 3rem;
+    background-color: #e3f2fd;
+    border-radius: 12px;
+}
+
+footer p {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+/* Dark mode */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode header {
+    background: linear-gradient(135deg, #1565c0, #1976d2);
+}
+
+.dark-mode article {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode footer {
+    background-color: #2c2c2c;
+}
+
+.dark-mode .btn-download {
+    background-color: #2e7d32;
+}
+
+.dark-mode .btn-download:hover {
+    background-color: #1b5e20;
+}
+
+.dark-mode .btn-contact {
+    background-color: #006064;
+}
+
+.dark-mode .btn-contact:hover {
+    background-color: #003c3f;
+}
+
+/* Dark mode toggle button */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 0.8rem 1.2rem;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
     border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #1565c0;
 }
 
 /* Responsive design */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     header p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
-    main {
-        padding: 1rem;
+    .steps h2 {
+        font-size: 1.6rem;
     }
 
     article {
-        padding: 1rem;
+        padding: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    #dark-mode-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 0.6rem 1rem;
     }
 }
