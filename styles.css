@@ -325,3 +325,21 @@ header {
         font-size: 0.8rem;
     }
     }
+/* Tempmail button */
+.btn-tempmail {
+    background-color: #f57c00; /* Orange color for distinction */
+    color: #ffffff;
+}
+
+.btn-tempmail:hover {
+    background-color: #e65100; /* Darker orange on hover */
+    transform: scale(1.05);
+}
+
+.dark-mode .btn-tempmail {
+    background-color: #ef6c00; /* Slightly lighter orange in dark mode */
+}
+
+.dark-mode .btn-tempmail:hover {
+    background-color: #d84315; /* Darker orange on hover in dark mode */
+}
